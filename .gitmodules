@@ -1,3 +1,6 @@
 [submodule "external/curlpp"]
 	path = external/curlpp
 	url = git@github.com:jpbarrette/curlpp.git
+[submodule "external/rapidjson"]
+	path = external/rapidjson
+	url = git@github.com:Tencent/rapidjson.git
