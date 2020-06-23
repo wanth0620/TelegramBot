@@ -5,12 +5,12 @@ token_{token}
 {
 }
 
-void TelegramBot::who()
+void TelegramBot::send_message(string message)
 {
     curlpp::Easy request;
-    const std::string url = "https://api.telegram.org/bot" + token_ + "/getMe";
+    const std::string url = TELEGRAM_API + token_ + "/sendMessage?chat_id=1210449789&text=" + message;
     request.setOpt(new curlpp::options::Url(url)); 
-    request.setOpt(new curlpp::options::Verbose(false));
+    //request.setOpt(new curlpp::options::Verbose(false));
     std::stringstream result;
 
     request.setOpt(cURLpp::Options::WriteStream(&result));

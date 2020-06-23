@@ -12,6 +12,8 @@
 #include <curlpp/Exception.hpp>
 #include <curlpp/Infos.hpp>
 
+#define TELEGRAM_API "https://api.telegram.org/bot"
+
 using namespace std;
 
 class TelegramBot
@@ -20,8 +22,7 @@ class TelegramBot
     TelegramBot(const std::string token);
     ~TelegramBot(){};
 
-    bool send_message(std::string message);
-    void who();
+    void send_message(std::string message);
 
 private:
     std::string token_;
