@@ -9,5 +9,6 @@ file (GLOB MAIN_HEADERS
         )
 
 add_executable (${TARGET_NAME} ${MAIN_SRC} ${MAIN_HEADERS})
-target_include_directories (${TARGET_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/..")
+target_include_directories(${TARGET_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
+target_link_libraries (${TARGET_NAME} curlpp)
