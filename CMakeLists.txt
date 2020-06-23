@@ -6,7 +6,8 @@ set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(
-    "${CMAKE_CURRENT_SOURCE_DIR}/external/"
+    "${CMAKE_CURRENT_SOURCE_DIR}/external/curlpp/include"
 )
+
 add_subdirectory(external/curlpp)
 add_subdirectory(src)
