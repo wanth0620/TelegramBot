@@ -5,6 +5,12 @@ int main()
     using namespace rapidjson;
     Document document;
     std::cout << "Testing" << std::endl;
-    TelegramBot bot("1196681836:AAGChiD1eCjYAgtnUa3x2GdaQw3zjLLpwLE");
-    bot.send_message("testing 123");
+    
+    ifstream Configuration("config.ini");
+    
+    string token;
+    getline(Configuration, token);
+
+    TelegramBot bot(token);
+    bot.send_message("Hihi");
 }
